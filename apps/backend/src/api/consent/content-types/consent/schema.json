@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consents",
+  "info": {
+    "singularName": "consent",
+    "pluralName": "consents",
+    "displayName": "Consent"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user.user",
+      "required": true
+    },
+    "formResponse": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::form-response.form-response",
+      "required": true
+    },
+    "attachment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::attachment.attachment"
+    },
+    "consentType": {
+      "type": "string",
+      "required": true
+    },
+    "signedAt": {
+      "type": "datetime"
+    },
+    "isCurrent": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

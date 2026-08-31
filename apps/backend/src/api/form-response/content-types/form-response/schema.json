@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_responses",
+  "info": {
+    "singularName": "form-response",
+    "pluralName": "form-responses",
+    "displayName": "Form Response"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user.user",
+      "required": true
+    },
+    "form": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::form.form",
+      "required": true
+    },
+    "formVersion": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::form-version.form-version",
+      "required": true
+    },
+    "payloadJson": {
+      "type": "json",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["borrador", "finalizado", "anulado"],
+      "default": "finalizado"
+    },
+    "answeredAt": {
+      "type": "datetime"
+    },
+    "answeredBy": {
+      "type": "string"
+    }
+  }
+}

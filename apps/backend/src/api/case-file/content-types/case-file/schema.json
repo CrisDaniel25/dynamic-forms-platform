@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_files",
+  "info": {
+    "singularName": "case-file",
+    "pluralName": "case-files",
+    "displayName": "Case File"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user.user",
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["open", "closed", "archived"],
+      "default": "open"
+    },
+    "openedAt": {
+      "type": "datetime"
+    },
+    "closedAt": {
+      "type": "datetime"
+    }
+  }
+}

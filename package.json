@@ -1,0 +1,11 @@
+{
+  "name": "plataforma-formularios-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.16.1",
+  "scripts": {
+    "dev": "echo Use app-level dev scripts",
+    "build": "echo Use app-level build scripts",
+    "test": "echo Use app-level test scripts"
+  }
+}

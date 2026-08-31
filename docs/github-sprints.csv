@@ -1,0 +1,7 @@
+Title,Body,Labels,Milestone,Assignees
+"Sprint 0 - Base tecnica","Objetivo: dejar base tecnica del monorepo, Docker Compose, esquema inicial y contratos base.","type:sprint,priority:high","2026-09-07 to 2026-09-11",""
+"Sprint 1 - Auth y registro base","Objetivo: login, roles, alta de usuario y listado base.","type:sprint,priority:high","2026-09-14 to 2026-09-18",""
+"Sprint 2 - Formularios dinamicos","Objetivo: integracion Form.io, consulta de formulario vigente y respuestas versionadas.","type:sprint,priority:high","2026-09-21 to 2026-09-25",""
+"Sprint 3 - Versionado y publicacion","Objetivo: publicar formularios inmutables y consultar historial de versiones.","type:sprint,priority:high","2026-09-28 to 2026-10-02",""
+"Sprint 4 - Consentimientos y expediente","Objetivo: consentimientos, adjuntos MinIO y expediente por usuario.","type:sprint,priority:high","2026-10-05 to 2026-10-09",""
+"Sprint 5 - Estabilizacion y demo POC","Objetivo: pruebas E2E, carga inicial y demo final del POC.","type:sprint,priority:high","2026-10-12 to 2026-10-16",""

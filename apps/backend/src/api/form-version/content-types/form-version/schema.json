@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_versions",
+  "info": {
+    "singularName": "form-version",
+    "pluralName": "form-versions",
+    "displayName": "Form Version"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "form": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::form.form",
+      "required": true
+    },
+    "versionNumber": {
+      "type": "integer",
+      "required": true
+    },
+    "schemaJson": {
+      "type": "json",
+      "required": true
+    },
+    "uiSchemaJson": {
+      "type": "json"
+    },
+    "effectiveFrom": {
+      "type": "datetime",
+      "required": true
+    },
+    "effectiveTo": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["draft", "published", "archived"],
+      "default": "draft"
+    },
+    "publishedBy": {
+      "type": "string"
+    },
+    "publishedAt": {
+      "type": "datetime"
+    }
+  }
+}

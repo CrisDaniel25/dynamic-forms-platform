@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attachments",
+  "info": {
+    "singularName": "attachment",
+    "pluralName": "attachments",
+    "displayName": "Attachment"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user.user",
+      "required": true
+    },
+    "formResponse": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::form-response.form-response"
+    },
+    "caseFile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::case-file.case-file"
+    },
+    "bucket": {
+      "type": "string",
+      "required": true
+    },
+    "objectKey": {
+      "type": "string",
+      "required": true
+    },
+    "fileName": {
+      "type": "string",
+      "required": true
+    },
+    "mimeType": {
+      "type": "string",
+      "required": true
+    },
+    "sizeBytes": {
+      "type": "biginteger",
+      "required": true
+    },
+    "checksum": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["image", "document", "consent", "support"],
+      "required": true
+    },
+    "uploadedBy": {
+      "type": "string"
+    },
+    "uploadedAt": {
+      "type": "datetime"
+    }
+  }
+}

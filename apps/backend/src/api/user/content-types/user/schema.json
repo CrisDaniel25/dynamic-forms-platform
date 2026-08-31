@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users",
+  "info": {
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "identityDocument": {
+      "type": "string"
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": ["male", "female", "other", "not_specified"]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["active", "inactive", "archived"],
+      "default": "active"
+    }
+  }
+}
