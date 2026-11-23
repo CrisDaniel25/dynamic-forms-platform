@@ -1,5 +1,7 @@
 # Plataforma Formularios Monorepo
 
+> **Portfolio demo:** the `portfolio-demo` branch includes an independent browser-local form builder in `portfolio-demo/`. It uses fictional data and demonstrates the intended product workflow without connecting to production services.
+
 Monorepo base para una plataforma de formularios dinamicos con arquitectura modular y limites claros entre frontend, backend, datos e infraestructura.
 
 ## Estructura
